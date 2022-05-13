@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/decor2_dp"
+    android:clipToPadding="false"
+    android:paddingHorizontal="@dimen/decor2_dp"
+    android:paddingVertical="@dimen/decor3_dp"
+    tools:context=".ui.detail.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/defaultVaultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_style"
+        android:elevation="@dimen/shadow_dp"
+        android:padding="@dimen/decor3_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/default_vault_ico"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/rub_ico"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/title1_sp"
+            app:layout_constraintEnd_toStartOf="@+id/default_vault_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/default_vault_name"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/decor2_dp"
+            android:gravity="center"
+            android:text="@string/rub_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title1_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/default_vault_ico"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/default_vault_value"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/decor1_dp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title2_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/default_vault_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/exchange_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/decor1_dp"
+        android:contentDescription="@string/exchange_ico"
+        android:src="@drawable/ic_exchange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defaultVaultLayout"
+        app:tint="@color/secondary" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/selectedVaultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/decor1_dp"
+        android:background="@drawable/shadow_style"
+        android:elevation="@dimen/shadow_dp"
+        android:padding="@dimen/decor3_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exchange_ico">
+
+        <TextView
+            android:id="@+id/selected_vault_ico"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/title1_sp"
+            app:layout_constraintEnd_toStartOf="@+id/selected_vault_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/selected_vault_name"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/decor2_dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title1_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selected_vault_ico"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/selected_vault_value"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/decor1_dp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title2_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selected_vault_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exchange_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/decor1_dp"
+        android:enabled="false"
+        android:paddingVertical="@dimen/decor3_dp"
+        android:text="@string/exchange_btn"
+        android:textAllCaps="false"
+        android:textSize="@dimen/title2_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedVaultLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

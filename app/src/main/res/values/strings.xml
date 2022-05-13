@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="favorite">Избранное</string>
+    <string name="home">Домой</string>
+    <string name="history">История</string>
+    <string name="graph">График</string>
+    <string name="graph_title">График курса рубля к другим валютам</string>
+    <string name="exchange_ico">Exchange</string>
+    <string name="exchange_btn">Выполнить обмен</string>
+    <string name="rub_name">RUB</string>
+    <string name="rub_ico">₽</string>
+    <string name="filter">Фильтр</string>
+    <string name="all_time">Всё время</string>
+    <string name="week">Неделя</string>
+    <string name="month">Месяц</string>
+    <string name="apply_btn">Применить фильтр</string>
+    <string name="period">Период</string>
+    <string name="on">Включить</string>
+    <string name="date_example">ГГГГ-ММ-ДД</string>
+</resources>

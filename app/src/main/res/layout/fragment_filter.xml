@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.filter.FilterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/decor1_dp">
+
+        <TextView
+            android:id="@+id/all_time"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/decor2_dp"
+            android:layout_marginVertical="@dimen/decor3_dp"
+            android:background="@drawable/shadow_style"
+            android:drawablePadding="@dimen/decor1_dp"
+            android:elevation="@dimen/shadow_dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/decor2_dp"
+            android:paddingVertical="@dimen/decor3_dp"
+            android:text="@string/all_time"
+            android:textSize="@dimen/title1_sp"
+            app:drawableStartCompat="@drawable/ic_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/week"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/decor2_dp"
+            android:layout_marginVertical="@dimen/decor3_dp"
+            android:background="@drawable/shadow_style"
+            android:drawablePadding="@dimen/decor1_dp"
+            android:elevation="@dimen/shadow_dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/decor2_dp"
+            android:paddingVertical="@dimen/decor3_dp"
+            android:text="@string/week"
+            android:textSize="@dimen/title1_sp"
+            app:drawableStartCompat="@drawable/ic_week"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/all_time" />
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="@dimen/default_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/decor2_dp"
+            android:layout_marginVertical="@dimen/decor3_dp"
+            android:background="@drawable/shadow_style"
+            android:drawablePadding="@dimen/decor1_dp"
+            android:elevation="@dimen/shadow_dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/decor2_dp"
+            android:paddingVertical="@dimen/decor3_dp"
+            android:text="@string/month"
+            android:textSize="@dimen/title1_sp"
+            app:drawableStartCompat="@drawable/ic_month"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/week" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/apply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/decor1_dp"
+            android:paddingVertical="@dimen/decor3_dp"
+            android:text="@string/apply_btn"
+            android:textAllCaps="false"
+            android:textSize="@dimen/title2_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/segment" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/segment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/decor2_dp"
+            android:layout_marginVertical="@dimen/decor3_dp"
+            android:background="@drawable/shadow_style"
+            android:elevation="@dimen/shadow_dp"
+            android:paddingHorizontal="@dimen/decor2_dp"
+            android:paddingVertical="@dimen/decor3_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/month">
+
+            <TextView
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/decor1_dp"
+                android:gravity="center_vertical"
+                android:text="@string/period"
+                android:textSize="@dimen/title1_sp"
+                app:drawableStartCompat="@drawable/ic_period"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/on_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:buttonTint="@color/secondary"
+                android:layoutDirection="rtl"
+                android:text="@string/on"
+                android:textColor="#757575"
+                android:textSize="@dimen/title1_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/start_date_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/default_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/decor1_dp"
+                android:hint="@string/date_example"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/period"
+                app:startIconDrawable="@drawable/ic_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title2_sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/date_ico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/exchange_ico"
+                android:src="@drawable/ic_exchange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_date_layout"
+                app:tint="@color/secondary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/finish_date_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/default_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/decor1_dp"
+                android:hint="@string/date_example"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date_ico"
+                app:startIconDrawable="@drawable/ic_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/finish_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="date"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title2_sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CalendarView
+                android:id="@+id/calendar_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/calendar_height"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_date_layout" />
+
+            <CalendarView
+                android:id="@+id/calendar_finish"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/calendar_height"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/finish_date_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
